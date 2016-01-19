@@ -1,0 +1,53 @@
+/* to contain the content */
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.clear {
+  clear: both;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+/*header section */
+
+.aloha-logo-1 {
+    float: left;
+}
+
+.cart-icon-1 {
+    float: right;
+}
+
+/* hero section */
+
+.hero-banner {
+  background: url(../img/banner-girl.png),
+              url(../img/flower-bkgd.jpg);
+}
+
+.hero-title {
+  text-align: center;
+  font-size: 2em;
+  color: red;
+  margin: 2em 0em;
+}
+
+.hero-sub {
+  text-align: center;
+  font-size: 5em;
+  color: red;
+  margin: 2em 0em;
+}
+
+
+/*footer */
