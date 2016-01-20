@@ -1,5 +1,24 @@
-/* to contain the content */
+/* LEGEND
+0.5 clearfix, container, floats
+1. header
+2. hero-banner
+3. handcrafted-section
+4. product-section
+5. subscribe-section
+6. footer
 
+things to work on:
+- resize the header logo sizes
+- change the hero fonts
+- resize hero pics
+
+*/
+
+
+
+
+/* clearfix, container, floats */
+/* to contain the content and centers the section heading texts*/
 .container {
   max-width: 1240px;
   margin: 0 auto;
@@ -20,34 +39,66 @@
 
 /*header section */
 
-.aloha-logo-1 {
+.aloha-logo {
     float: left;
 }
 
-.cart-icon-1 {
+.cart-icon {
     float: right;
 }
 
 /* hero section */
 
+/* the hero layers */
 .hero-banner {
-  background: url(../img/banner-girl.png),
-              url(../img/flower-bkgd.jpg);
+  background: url(img/banner-girl.png),
+              url(img/flower-bkgd.jpg);
+  background-repeat: no-repeat;
+  height: 80vh;
 }
 
-.hero-title {
-  text-align: center;
+.hero-text {
+  position: absolute;
+  color: white;
+}
+
+.hero-title  {
   font-size: 2em;
-  color: red;
-  margin: 2em 0em;
+  margin-top: 30vh;
+  margin-left: 22vw;
 }
 
 .hero-sub {
-  text-align: center;
+
   font-size: 5em;
-  color: red;
-  margin: 2em 0em;
+  margin-top: -3vh;
+  margin-left: 22vw;
 }
 
+/* section headings. stylizes each section's heading text */
+
+.section-heading {
+  font-size: 2.5em;
+  margin-top: 2em;
+}
+
+/* handcrafted-section */
+
+/* product-section */
+
+.product-description {
+  display: inline-block;
+  margin-left: 1vw;
+  padding-left: 10vw;
+}
+
+/* subscribe-section */
+
+.subscribe-section {
+  background: url(img/wave-bkgd.jpg);
+  background-repeat: no-repeat;
+  height: 42vh;
+
+}
 
 /*footer */
