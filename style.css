@@ -37,24 +37,34 @@ things to work on:
   float: right;
 }
 
+img, video {
+   max-width: 100%; /* adhere to container width */
+   height: auto; /* make sure height scales correctly */
+}
+
 /*header section */
 
 .aloha-logo {
     float: left;
+    width: 11em;
 }
 
 .cart-icon {
     float: right;
+    width: 3.5em;
 }
 
 /* hero section */
 
+/*linear-gradient(to bottom, rgba(0,0,0,0,25) 0%, rgba(0,0,0,0,9) 100%), */
 /* the hero layers */
 .hero-banner {
-  background: url(img/banner-girl.png),
-              url(img/flower-bkgd.jpg);
+  background:
+              url(img/banner-girl.png) no-repeat center 60px,
+              url(img/flower-bkgd.jpg) repeat-x center top;
   background-repeat: no-repeat;
   height: 80vh;
+  margin-top: 5em;
 }
 
 .hero-text {
@@ -102,3 +112,21 @@ things to work on:
 }
 
 /*footer */
+
+.footer-background {
+  background-color: #242424;
+  height: 30vh;
+  width: 100%;
+}
+
+.social-media {
+  color: white;
+}
+
+.contact-info {
+  color: white;
+}
+
+.address {
+  color: #969696;
+}
