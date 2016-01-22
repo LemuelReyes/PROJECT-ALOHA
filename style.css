@@ -11,14 +11,31 @@ things to work on:
 - resize the header logo sizes
 - change the hero fonts
 - resize hero pics
+- change header fonts
+- change product dress colors
+-
 
 */
 
 
 
 
-/* clearfix, container, floats */
+/* html, clearfix, container, floats, img, vid */
 /* to contain the content and centers the section heading texts*/
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: 'Raleway-Light';
+  color: #2d2d2d;
+}
+
+h2 {
+  font-family: 'Playfair-Display';
+}
+
 .container {
   max-width: 1240px;
   margin: 0 auto;
@@ -42,29 +59,120 @@ img, video {
    height: auto; /* make sure height scales correctly */
 }
 
+/* link */
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: #b64036;
+}
+
+
+/* @fontface styles */
+
+@font-face {
+    font-family: 'Playfair-Regular';
+    src: url('css/fonts/playfair/PlayfairDisplay-Regular.eot');
+    src: url('css/fonts/playfair/PlayfairDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+         url('css/fonts/playfair/PlayfairDisplay-Regular.woff') format('woff'),
+         url('css/fonts/playfair/PlayfairDisplay-Regular.ttf') format('truetype'),
+         url('css/fonts/playfair/PlayfairDisplay-Regular.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair-Bold';
+    src: url('css/fonts/playfair/PlayfairDisplay-Bold.eot');
+    src: url('css/fonts/playfair/PlayfairDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+         url('css/fonts/playfair/PlayfairDisplay-Bold.woff') format('woff'),
+         url('css/fonts/playfair/PlayfairDisplay-Bold.ttf') format('truetype'),
+         url('css/fonts/playfair/PlayfairDisplay-Bold.svg#robotoregular') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair-Italics';
+    src: url('css/fonts/playfair/PlayfairDisplay-Italic.eot');
+    src: url('css/fonts/playfair/PlayfairDisplay-Italic.eot?#iefix') format('embedded-opentype'),
+         url('css/fonts/playfair/PlayfairDisplay-Italic.woff') format('woff'),
+         url('css/fonts/playfair/PlayfairDisplay-Italic.ttf') format('truetype'),
+         url('css/fonts/playfair/PlayfairDisplay-Italic.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Raleway-Light';
+    src: url('css/fonts/raleway/Raleway-Light.eot');
+    src: url('css/fonts/raleway/Raleway-Light.eot?#iefix') format('embedded-opentype'),
+         url('css/fonts/raleway/Raleway-Light.woff') format('woff'),
+         url('css/fonts/raleway/Raleway-Light.ttf') format('truetype'),
+         url('css/fonts/raleway/Raleway-Light.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway-Italic';
+    src: url('css/fonts/raleway/Raleway-LightItalic.eot');
+    src: url('css/fonts/raleway/Raleway-LightItalic.eot?#iefix') format('embedded-opentype'),
+         url('css/fonts/raleway/Raleway-LightItalic.woff') format('woff'),
+         url('css/fonts/raleway/Raleway-LightItalic.ttf') format('truetype'),
+         url('css/fonts/raleway/Raleway-LightItalic.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Raleway-Bold';
+    src: url('css/fonts/raleway/Raleway-Bold.eot');
+    src: url('css/fonts/raleway/Raleway-Bold.eot?#iefix') format('embedded-opentype'),
+         url('css/fonts/raleway/Raleway-Bold.woff') format('woff'),
+         url('css/fonts/raleway/Raleway-Bold.ttf') format('truetype'),
+         url('css/fonts/raleway/Raleway-Bold.svg#robotoregular') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* links */
+
+brand-color: #e2574c;
+
 /*header section */
+
+.header {
+  padding-bottom: 2rem;
+}
 
 .aloha-logo {
     float: left;
+    padding-bottom: 1rem;
+    padding-left: 7em;
     width: 11em;
 }
 
 .cart-icon {
     float: right;
-    width: 3.5em;
+    width: 3rem;
+    padding-right: 5rem;
+    padding-top: 1rem;
 }
 
 /* hero section */
 
-/*linear-gradient(to bottom, rgba(0,0,0,0,25) 0%, rgba(0,0,0,0,9) 100%), */
 /* the hero layers */
 .hero-banner {
-  background:
-              url(img/banner-girl.png) no-repeat center 60px,
+  background: linear-gradient( to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100% ),
+              url(img/banner-girl.png) no-repeat center 12px,
               url(img/flower-bkgd.jpg) repeat-x center top;
-  background-repeat: no-repeat;
-  height: 80vh;
-  margin-top: 5em;
+    background-size: cover, 250px 615px, contain;
+    height: 550px;
+    position: relative;
 }
 
 .hero-text {
@@ -73,9 +181,11 @@ img, video {
 }
 
 .hero-title  {
-  font-size: 2em;
-  margin-top: 30vh;
-  margin-left: 22vw;
+  font-size: 1.4rem;
+  margin-top: 18vh;
+  padding-bottom: 4rem;
+  margin-left: 25vw;
+  text-transform: uppercase;
 }
 
 .hero-sub {
@@ -89,32 +199,77 @@ img, video {
 
 .section-heading {
   font-size: 2.5em;
-  margin-top: 2em;
+  font-family: 'Playfair-Regular';
+  padding: 4rem;
+}
+
+.section-heading-italics {
+  font-style: 'Playfair-Italics';
 }
 
 /* handcrafted-section */
 
+.handcrafted-text {
+  font-family: sans-serif;
+  font-size: 1.3rem;
+  padding: 0rem 17rem 6rem;
+}
+
+
 /* product-section */
+
+/* product inventory controls the images */
+.product-inventory {
+  width: 16rem;
+  padding-left: 3rem;
+}
+
+/* product description is the div that wraps the category, info, price */
 
 .product-description {
   display: inline-block;
-  margin-left: 1vw;
-  padding-left: 10vw;
+  padding-left: 5rem;
+}
+
+/* kind of clothing i.e. dresses, ties, etc*/
+.product-category {
+  text-transform: uppercase;
+}
+
+/*product info is the clothing name */
+.product-info {
+  color: #e2574c;
+  font-size: 1.5rem;
+}
+
+.product-price {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
 }
 
 /* subscribe-section */
 
 .subscribe-section {
-  background: url(img/wave-bkgd.jpg);
+  background: url(img/wave-bkgd.jpg) center bottom;
   background-repeat: no-repeat;
   height: 42vh;
-
+  color: white;
 }
 
+.subscribe-heading {
+  padding-top: 5rem;
+}
+
+.subscription-text {
+  font-size: 1.4rem;
+  max-width: 45rem;
+  padding-left: 17rem;
+  padding-bottom: 2rem;
+}
 /*footer */
 
 .footer-background {
-  background-color: #242424;
+  background-color:#242424;
   height: 30vh;
   width: 100%;
 }

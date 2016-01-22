@@ -5,36 +5,36 @@
      <meta charset="utf-8">
      <title>Aloha Shop</title>
      <link rel="stylesheet" type="text/css" href="style.css">
-     <!-- <link rel="stylesheet" type="text/css" href="ericmeyer_reset.css"> -->
+     <link rel="stylesheet" type="text/css" href="ericmeyer_reset.css">
      <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" type="text/css" href="css/fonts/playfair">
+     <link rel="stylesheet" type="text/css" href="css/fonts/raleway">
+
+
    </head>
 
    <body>
 
 <!-- the "container" class limits the display to 1240px and centers text -->
 
-    <header class="container">
-       <img src="img/aloha-logo.svg" alt="aloha logo" class="aloha-logo" />
+    <header class="container header">
+       <img src="img/aloha-logo.svg" alt="aloha logo" class="aloha-logo float-left" />
        <img src="img/cart-icon.svg" alt="cart logo" class="cart-icon" />
     </header>
-
 
      <section class="hero-banner clear">
        <div class="hero-text container">
          <p class="hero-title">new collection</p>
-         <p class="hero-sub"><b>Spring/Summer 2016</b></p>
+         <p class="hero-sub">Spring/Summer 2016</b></p>
        </div>
      </section>
 
-
-
     <section class="handcrafted-section">
       <div class="container">
-      <h2 class="section-heading"><i>Hand-Crafted</i> Styles </h2>
-      <p>Aloha Apparel Co. sells only the finest ready-to-travel clothing.
+      <h2 class="section-heading"><span class="section-heading-italics">Hand-Crafted</span> Styles </h2>
+      <p class=handcrafted-text>Aloha Apparel Co. sells only the finest ready-to-travel clothing.
         Browse our current selection of products or sign-up for updates below.</p>
       </div>
-      <!-- a horizontal style here (use css) -->
     </section>
 
     <hr />
@@ -46,52 +46,55 @@
 
       <!-- 4 pictures side by side -->
 
-      <img src="img/stretch-knit-dress.jpg" class="float-left">
+      <img src="img/stretch-knit-dress.jpg" class="float-left product-inventory">
 
-      <img src="img/cotton-blue-shirt.jpg" class="float-left">
+      <img src="img/cotton-blue-shirt.jpg" class="float-left product-inventory">
 
-      <img src="img/checked-stretch-dress.jpg" class="float-left">
+      <img src="img/checked-stretch-dress.jpg" class="float-left product-inventory">
 
-      <img src="img/blue-hipster-backpack.jpg" class="float-left">
+      <img src="img/blue-hipster-backpack.jpg" class="float-left product-inventory">
 
 
       <!-- must change color to #e2574c -->
       <div class="product-description">
-          <p>dresses</p>
-          <p>Stretch Knit Dress</p>
-          <p>$169.00</p>
+          <p class="product-category">dresses</p>
+          <p class="product-info">Stretch Knit Dress</p>
+          <p class="product-price">$169.00</p>
       </div>
 
       <div class="product-description">
-          <p>shirts</p>
-          <p>Cotton Blue Shirt</p>
-          <p>$89.00</p>
+          <p class="product-category">shirts</p>
+          <p class="product-info">Cotton Blue Shirt</p>
+          <p class="product-price">$89.00</p>
       </div>
 
       <div class="product-description">
-          <p>dresses</p>
-          <p>Checked Stretch Dress</p>
-          <p>$129.00</p>
+          <p class="product-category">dresses</p>
+          <p class="product-info">Checked Stretch Dress</p>
+          <p class="product-price">$129.00</p>
       </div>
 
       <div class="product-description">
-          <p>bags</p>
-          <p>Blue Hipster Backpack</p>
-          <p>$69.00</p>
+          <p class="product-category">bags</p>
+          <p class="product-info">Blue Hipster Backpack</p>
+          <p class="product-price">$69.00</p>
       </div>
 
     </section>
 
     <section class="subscribe-section">
       <div class="container">
-          <h2 class="section-heading"><i>Sign-up for</i> Updates</h2>
-          <p>Stay updated on our latest product releases, be first to find out about upcoming sales, and get free style
+          <h2 class="section-heading">Sign-up for</i> Updates</h2>
+          <p class="subscription-text">Stay updated on our latest product releases, be first to find out about upcoming sales, and get free style
           tips from our blog. Unsubscribe at any time.</p>
-          <div class="subscription-input">
-              <input type="text" value="Your Email">
-              <span>Subscription</span>
-          </div>
-    </div>
+
+          <form>
+              <!-- placeholder for subscription bar, use focus pseudo element for the bar -->
+              <input type="text" value="Your Email" placeholder="hi">
+              <!-- float the subscription to the right, button type="submit"-->
+              <button type="submit">Subscription</button>
+          </form>
+      </div>
     </section>
 
     <footer class="footer-background">
@@ -99,7 +102,7 @@
         <section class="float-left contact-info">
           <p>© 2016 Aloha Apparel Co.</p>
           <p>Powered by HTML and CSS.</p>
-          <p>604-604-6040. info@alohaapparel.com</p>
+          <p>604-604-6040. <a href=mailto:"info@alohaapparel.com">info@alohaapparel.com</a></p>
           <span class="address">1490 W Broadway
           Vancouver, BC, Canada</span>
           </section>
@@ -107,6 +110,7 @@
         <!-- insert font incons/ change the span to ul li -->
         <section class="social-media float-right">
           <ul style="list-style:none;">
+
             <li>Facebook</li>
             <li>Twitter</li>
             <li>Instagram</li>
