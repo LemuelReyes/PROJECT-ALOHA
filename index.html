@@ -18,7 +18,7 @@
 <!-- the "container" class limits the display to 1240px and centers text -->
 
     <header class="container header">
-       <img src="img/aloha-logo.svg" alt="aloha logo" class="aloha-logo float-left" />
+       <img src="img/aloha-logo.svg" alt="aloha logo" class="aloha-logo" />
        <img src="img/cart-icon.svg" alt="cart logo" class="cart-icon" />
     </header>
 
@@ -31,7 +31,7 @@
 
     <section class="handcrafted-section">
       <div class="container">
-      <h2 class="section-heading"><span class="section-heading-italics">Hand-Crafted</span> Styles </h2>
+      <h2 class="section-heading">Hand-Crafted <span class="heading-bold">Styles</span></h2>
       <p class=handcrafted-text>Aloha Apparel Co. sells only the finest ready-to-travel clothing.
         Browse our current selection of products or sign-up for updates below.</p>
       </div>
@@ -41,7 +41,7 @@
 
     <section class="product-section">
       <div class="container">
-      <h2 class="section-heading"><i>Most-Loved</i> Products</h2>
+      <h2 class="section-heading"><i>Most-Loved</i> <span class="heading-bold">Products</span></h2>
       </div>
 
       <!-- 4 pictures side by side -->
@@ -84,22 +84,23 @@
 
     <section class="subscribe-section">
       <div class="container">
-          <h2 class="section-heading">Sign-up for</i> Updates</h2>
+          <h2 class="section-heading">Sign-up for</i> <span class="heading-bold">Updates</span></h2>
           <p class="subscription-text">Stay updated on our latest product releases, be first to find out about upcoming sales, and get free style
           tips from our blog. Unsubscribe at any time.</p>
-
-          <form>
-              <!-- placeholder for subscription bar, use focus pseudo element for the bar -->
-              <input type="text" value="Your Email" placeholder="hi">
-              <!-- float the subscription to the right, button type="submit"-->
-              <button type="submit">Subscription</button>
-          </form>
       </div>
+
+      <form class="subscription-bar">
+          <!-- placeholder for subscription bar, use focus pseudo element for the bar -->
+          <input type="text" value="Your Email" placeholder="hi">
+          <!-- float the subscription to the right, button type="submit"-->
+          <button type="submit">Subscribe</button>
+      </form>
+
     </section>
 
     <footer class="footer-background">
 
-        <section class="float-left contact-info">
+        <section class="contact-info">
           <p>© 2016 Aloha Apparel Co.</p>
           <p>Powered by HTML and CSS.</p>
           <p>604-604-6040. <a href=mailto:"info@alohaapparel.com">info@alohaapparel.com</a></p>
@@ -108,7 +109,7 @@
           </section>
 
         <!-- insert font incons/ change the span to ul li -->
-        <section class="social-media float-right">
+        <section class="social-media">
           <ul style="list-style:none;">
 
             <li>Facebook</li>

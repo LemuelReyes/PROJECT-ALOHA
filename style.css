@@ -1,11 +1,12 @@
 /* LEGEND
 0.5 clearfix, container, floats
-1. header
-2. hero-banner
+1. header-section
+2. hero-section
 3. handcrafted-section
 4. product-section
 5. subscribe-section
 6. footer
+7. @fontface
 
 things to work on:
 - resize the header logo sizes
@@ -21,7 +22,7 @@ things to work on:
 
 
 /* html, clearfix, container, floats, img, vid */
-/* to contain the content and centers the section heading texts*/
+
 
 html {
   font-size: 14px;
@@ -30,11 +31,10 @@ html {
 body {
   font-family: 'Raleway-Light';
   color: #2d2d2d;
+
 }
 
-h2 {
-  font-family: 'Playfair-Display';
-}
+/* to contain the content and centers the section heading texts*/
 
 .container {
   max-width: 1240px;
@@ -46,13 +46,6 @@ h2 {
   clear: both;
 }
 
-.float-left {
-  float: left;
-}
-
-.float-right {
-  float: right;
-}
 
 img, video {
    max-width: 100%; /* adhere to container width */
@@ -69,8 +62,209 @@ a:hover {
   color: #b64036;
 }
 
+/* links */
 
-/* @fontface styles */
+brand-color: #e2574c;
+
+/* =============================================================================
+                                HEADER-SECTION
+===============================================================================*/
+
+.header {
+  padding-bottom: 2rem;
+}
+
+.aloha-logo {
+  float: left;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5em;
+  width: 11em;
+}
+
+.cart-icon {
+  float: right;
+  width: 4rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+}
+
+/* =============================================================================
+                                HERO-SECTION
+===============================================================================*/
+
+/* the hero layers */
+.hero-banner {
+  background: linear-gradient( to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100% ),
+              url(img/banner-girl.png) no-repeat center 58px,
+              url(img/flower-bkgd.jpg) repeat-x center top;
+    background-size: cover, 250px 615px, contain;
+    height: 550px;
+    position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  color: white;
+}
+
+.hero-title  {
+  font-size: 1.4rem;
+  margin-top: 18vh;
+  padding-bottom: 4rem;
+  margin-left: 25vw;
+  text-transform: uppercase;
+}
+
+.hero-sub {
+
+  font-size: 5em;
+  margin-top: -3vh;
+  margin-left: 22vw;
+}
+
+/* section headings. stylizes each section's heading text */
+
+.section-heading {
+  font-size: 2.5em;
+  font-style: italic;
+  padding: 4rem;
+}
+
+/* =============================================================================
+                                HANDCRAFTED-SECTION
+===============================================================================*/
+
+.handcrafted-text {
+  font-family: sans-serif;
+  font-size: 1.3rem;
+  padding: 0rem 17rem 6rem;
+  color: #2d2d2d;
+}
+
+.heading-bold {
+  font-weight: bold;
+}
+
+/* =============================================================================
+                                PRODUCT-SECTION
+===============================================================================*/
+
+/* product inventory controls the images */
+.product-inventory {
+  width: 16rem;
+  padding-left: 3rem;
+}
+
+/* product description is the div that wraps the category, info, price */
+
+.product-description {
+  display: inline-block;
+  padding-left: 5rem;
+}
+
+/* kind of clothing i.e. dresses, ties, etc*/
+.product-category {
+  text-transform: uppercase;
+}
+
+/*product info is the clothing name */
+.product-info {
+  color: #e2574c;
+  font-size: 1.5rem;
+}
+
+.product-price {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+
+/* =============================================================================
+                                SUBSCRIBE-SECTION
+===============================================================================*/
+
+.subscribe-section {
+  background: linear-gradient( to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100% ),
+              url(img/wave-bkgd.jpg) center bottom;
+  background-repeat: no-repeat;
+  height: 42vh;
+  color: white;
+}
+
+.subscribe-heading {
+  padding-top: 5rem;
+}
+
+.subscription-text {
+  font-size: 1.30rem;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+  padding-top: 2rem;
+}
+
+.subscription-bar {
+  margin-left: 25rem;
+}
+
+input {
+  background-color: white;
+  border-radius: 27px;
+  width: 26rem;
+  height: 2.9rem;
+  border: 1px solid white;
+  font-size: 1rem;
+  color: #969696;
+  position: absolute;
+  padding-left: 2rem;
+
+}
+
+button {
+  background-color: #e2574c;
+  border-radius: 20px;
+  width: 7rem;
+  height: 2.5rem;
+  border: 1px solid #e2574c;
+  font-size: 1rem;
+  color: white;
+  position: relative;
+  left: 20.8rem;
+  top: 0.3rem;
+  z-index: 1;
+}
+
+
+/*=============================================================================
+                                  FOOTER
+=============================================================================== */
+
+.footer-background {
+  background-color:#242424;
+  height: 30vh;
+  width: 100%;
+}
+
+.social-media {
+  color: white;
+  float: right;
+}
+
+.contact-info {
+  color: white;
+  float: left;
+}
+
+.address {
+  color: #969696;
+  float: left;
+}
+
+
+
+/*=============================================================================
+                                @FONTFACE
+=============================================================================== */
 
 @font-face {
     font-family: 'Playfair-Regular';
@@ -137,151 +331,4 @@ a:hover {
          url('css/fonts/raleway/Raleway-Bold.svg#robotoregular') format('svg');
     font-weight: bold;
     font-style: normal;
-}
-
-/* links */
-
-brand-color: #e2574c;
-
-/*header section */
-
-.header {
-  padding-bottom: 2rem;
-}
-
-.aloha-logo {
-    float: left;
-    padding-bottom: 1rem;
-    padding-left: 7em;
-    width: 11em;
-}
-
-.cart-icon {
-    float: right;
-    width: 3rem;
-    padding-right: 5rem;
-    padding-top: 1rem;
-}
-
-/* hero section */
-
-/* the hero layers */
-.hero-banner {
-  background: linear-gradient( to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100% ),
-              url(img/banner-girl.png) no-repeat center 12px,
-              url(img/flower-bkgd.jpg) repeat-x center top;
-    background-size: cover, 250px 615px, contain;
-    height: 550px;
-    position: relative;
-}
-
-.hero-text {
-  position: absolute;
-  color: white;
-}
-
-.hero-title  {
-  font-size: 1.4rem;
-  margin-top: 18vh;
-  padding-bottom: 4rem;
-  margin-left: 25vw;
-  text-transform: uppercase;
-}
-
-.hero-sub {
-
-  font-size: 5em;
-  margin-top: -3vh;
-  margin-left: 22vw;
-}
-
-/* section headings. stylizes each section's heading text */
-
-.section-heading {
-  font-size: 2.5em;
-  font-family: 'Playfair-Regular';
-  padding: 4rem;
-}
-
-.section-heading-italics {
-  font-style: 'Playfair-Italics';
-}
-
-/* handcrafted-section */
-
-.handcrafted-text {
-  font-family: sans-serif;
-  font-size: 1.3rem;
-  padding: 0rem 17rem 6rem;
-}
-
-
-/* product-section */
-
-/* product inventory controls the images */
-.product-inventory {
-  width: 16rem;
-  padding-left: 3rem;
-}
-
-/* product description is the div that wraps the category, info, price */
-
-.product-description {
-  display: inline-block;
-  padding-left: 5rem;
-}
-
-/* kind of clothing i.e. dresses, ties, etc*/
-.product-category {
-  text-transform: uppercase;
-}
-
-/*product info is the clothing name */
-.product-info {
-  color: #e2574c;
-  font-size: 1.5rem;
-}
-
-.product-price {
-  padding-top: 2rem;
-  padding-bottom: 5rem;
-}
-
-/* subscribe-section */
-
-.subscribe-section {
-  background: url(img/wave-bkgd.jpg) center bottom;
-  background-repeat: no-repeat;
-  height: 42vh;
-  color: white;
-}
-
-.subscribe-heading {
-  padding-top: 5rem;
-}
-
-.subscription-text {
-  font-size: 1.4rem;
-  max-width: 45rem;
-  padding-left: 17rem;
-  padding-bottom: 2rem;
-}
-/*footer */
-
-.footer-background {
-  background-color:#242424;
-  height: 30vh;
-  width: 100%;
-}
-
-.social-media {
-  color: white;
-}
-
-.contact-info {
-  color: white;
-}
-
-.address {
-  color: #969696;
 }
