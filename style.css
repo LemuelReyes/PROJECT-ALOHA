@@ -110,17 +110,16 @@ brand-color: #e2574c;
 
 .hero-title  {
   font-size: 1.4rem;
-  margin-top: 18vh;
+  margin-top: 22vh;
   padding-bottom: 4rem;
-  margin-left: 25vw;
+  margin-left: 30vw;
   text-transform: uppercase;
 }
 
 .hero-sub {
-
-  font-size: 5em;
-  margin-top: -3vh;
-  margin-left: 22vw;
+  font-size: 4em;
+  margin-top: -4vh;
+  margin-left: 28vw;
 }
 
 /* section headings. stylizes each section's heading text */
@@ -248,6 +247,13 @@ button {
 .social-media {
   color: white;
   float: right;
+  padding-top: 5rem;
+  padding-right: 6rem;
+}
+
+ul li {
+  padding-bottom: 1rem;
+  text-size: 1rem;
 }
 
 .contact-info {
@@ -255,9 +261,30 @@ button {
   float: left;
 }
 
+.copyright {
+  padding-top: 5rem;
+  padding-left: 2.5rem;
+  padding-bottom: 0.5rem;
+  max-width: 12rem;
+}
+
+.powered-by {
+  padding-left: 2.5rem;
+  padding-bottom: 2rem;
+  max-width: 12rem;
+}
+
+.contact-us {
+  padding-left: 2.5rem;
+  padding-bottom: 0.7rem;
+  max-width: 16rem;
+}
+
 .address {
   color: #969696;
-  float: left;
+  padding-left: 2.5rem;
+  padding-bottom: 0.7rem;
+  max-width: 11rem;
 }
 
 
