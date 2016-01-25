@@ -134,7 +134,7 @@ brand-color: #e2574c;
 
 .section-heading {
   font-size: 2.5em;
-  padding: 4rem;
+  padding: 4rem 4rem 2rem 4rem;
   font-style: italic;
 }
 
@@ -145,8 +145,9 @@ brand-color: #e2574c;
 .handcrafted-text {
   font-size: 1.3rem;
   font-family: 'Raleway-Light';
-  padding: 0rem 17rem 6rem;
+  padding: 0rem 16rem 6rem;
   color: #2d2d2d;
+  line-height: 2.5rem;
 }
 
 .heading-bold {
@@ -217,9 +218,10 @@ brand-color: #e2574c;
   margin: 0 auto;
   padding-right: 20rem;
   margin-left: 14rem;
-  padding-bottom: 4rem;
+  padding-bottom: 1.2rem;
   font-family: 'Raleway-Light';
   display: block;
+  line-height: 2.5rem;
 }
 
 .subscription-bar {
