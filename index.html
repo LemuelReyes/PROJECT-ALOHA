@@ -4,19 +4,45 @@
    <head>
      <meta charset="utf-8">
      <title>Aloha Shop</title>
-     <link rel="stylesheet" type="text/css" href="style.css">
      <link rel="stylesheet" type="text/css" href="ericmeyer_reset.css">
+     <link href="js/jquery-slider/jquery.bxslider.css" rel="stylesheet" />
+     <link rel="stylesheet" type="text/css" href="style.css">
      <meta name="viewport" content="width=device-width, initial-scale=1">
-     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+
    </head>
 
    <body>
 
 <!-- the "container" class limits the display to 1240px and centers text -->
 
-    <header class="container header">
-       <img src="img/aloha-logo.svg" alt="aloha logo" class="aloha-logo" />
-       <img src="img/cart-icon.svg" alt="cart logo" class="cart-icon" />
+    <header class="main-header container">
+      <div class="flex-header">
+      <img src="img/aloha-logo.svg" alt="aloha logo" class="aloha-logo" />
+
+<!-- the id here applies smooth scrolling -->
+      <nav class="navigation-menu" id="nav">
+        <ul>
+          <li>
+              <a href="#about">about</a>
+          </li>
+          <li>
+              <a href="#shop">shop</a>
+          </li>
+          <li>
+              <a href="#featured">featured</a>
+          </li>
+          <li>
+              <a href="#updates">updates</a>
+          </li>
+        </ul>
+      </nav>
+
+      </nav>
+
+       <img src="img/cart-icon.svg" alt="cart logo" class="cart-logo" />
+     </div>
     </header>
 
      <section class="hero-banner clear">
@@ -26,7 +52,7 @@
        </div>
      </section>
 
-    <section class="handcrafted-section">
+    <section class="handcrafted-section" id="about">
       <div class="container">
       <h2 class="section-heading"><i>Hand-Crafted</i> <span class="heading-bold">Styles</span></h2>
       <p class=handcrafted-text>Aloha Apparel Co. sells only the finest ready-to-travel clothing.
@@ -34,65 +60,137 @@
       </div>
     </section>
 
-    <hr />
+    <div class="category-container" id="shop">
+      <div class="category-flex mens">
+        <span><a href="#nav" class="category-text">men's</a></span>
+      </div>
+      <div class="category-flex trends">
+        <span><a href="#nav" class="category-text">trends</a></span>
+      </div>
+      <div class="category-flex glasses">
+        <span><a href="#nav" class="category-text">glasses</a></span>
+      </div>
+      <div class="category-flex sale">
+        <span><a href="#nav" class="category-text">sale</a></span>
+      </div>
+      <div class="category-flex bags">
+        <span><a href="#nav" class="category-text">bags</a></span>
+      </div>
+      <div class="category-flex womens">
+        <span><a href="#nav" class="category-text">women's</a></span>
+      </div>
+    </div>
 
-
-
-
-    <section class="product-section">
+    <section class="product-section" id="featured">
       <div class="container">
       <h2 class="section-heading"><i>Most-Loved</i> <span class="heading-bold">Products</span></h2>
       </div>
 
       <!-- 4 pictures side by side -->
-      <div class="clothing-pictures">
-      <img src="img/stretch-knit-dress.jpg" class="float-left product-inventory">
 
-      <img src="img/cotton-blue-shirt.jpg" class="float-left product-inventory">
+      <ul class="bxslider clothing-pictures">
+        <li>
+          <img src="img/stretch-knit-dress.jpg" class="product-inventory" />
+              <div class="product-description">
+                  <p class="product-category">dresses</p>
+                  <p class="product-info">Stretch Knit Dress</p>
+                  <p class="product-price">$169.00</p>
+              </div>
 
-      <img src="img/checked-stretch-dress.jpg" class="float-left product-inventory">
+        </li>
 
-      <img src="img/blue-hipster-backpack.jpg" class="float-left product-inventory">
-      </div>
-
-      <div class="product-description">
-          <p class="product-category">dresses</p>
-          <p class="product-info">Stretch Knit Dress</p>
-          <p class="product-price">$169.00</p>
-      </div>
-
-      <div class="product-description">
-          <p class="product-category">shirts</p>
-          <p class="product-info">Cotton Blue Shirt</p>
-          <p class="product-price">$89.00</p>
-      </div>
-
-      <div class="product-description">
-          <p class="product-category">dresses</p>
-          <p class="product-info">Checked Stretch Dress</p>
-          <p class="product-price">$129.00</p>
-      </div>
-
-      <div class="product-description">
-          <p class="product-category">bags</p>
-          <p class="product-info">Blue Hipster Backpack</p>
-          <p class="product-price">$69.00</p>
-      </div>
+        <li>
+            <img src="img/cotton-blue-shirt.jpg" class="product-inventory" />
+                <div class="product-description">
+                    <p class="product-category">shirts</p>
+                    <p class="product-info">Cotton Blue Shirt</p>
+                    <p class="product-price">$89.00</p>
+                </div>
+        </li>
+        <li>
+          <img src="img/checked-stretch-dress.jpg" class="product-inventory" />
+                <div class="product-description">
+                    <p class="product-category">dresses</p>
+                    <p class="product-info">Checked Stretch Dress</p>
+                    <p class="product-price">$129.00</p>
+                </div>
+        </li>
+        <li>
+          <img src="img/blue-hipster-backpack.jpg" class="product-inventory" />
+                <div class="product-description">
+                    <p class="product-category">bags</p>
+                    <p class="product-info">Blue Hipster Backpack</p>
+                    <p class="product-price">$69.00</p>
+                </div>
+        </div>
+        </li>
+        <li>
+          <img src="img/denim-overall-shorts.jpg" class="product-inventory" />
+                <div class="product-description">
+                    <p class="product-category">denim</p>
+                    <p class="product-info">Denim Overall Shorts</p>
+                    <p class="product-price">$89.00</p>
+        </li>
+        <li>
+          <img src="img/pink-dotted-dress.jpg" class="product-inventory" />
+                <div class="product-description">
+                    <p class="product-category">dresses</p>
+                    <p class="product-info">Pink Dotted Dress</p>
+                    <p class="product-price">$99.00</p>
+        </li>
+        <li>
+          <img src="img/blue-silk-dress.jpg" class="product-inventory" />
+                <div class="product-description">
+                    <p class="product-category">dress</p>
+                    <p class="product-info">Blue Silk Dress</p>
+                    <p class="product-price">$119.00</p>
+        </li>
+        <li>
+          <img src="img/cotton-yellow-tshirt.jpg" class="product-inventory" />
+                <div class="product-description">
+                    <p class="product-category">shirts</p>
+                    <p class="product-info">Cotton Yellow Tshirt</p>
+                    <p class="product-price">$39.00</p>
+        </li>
+        <li>
+          <img src="img/stretch-knit-dress.jpg" class="product-inventory" />
+              <div class="product-description">
+                  <p class="product-category">dresses</p>
+                  <p class="product-info">Stretch Knit Dress</p>
+                  <p class="product-price">$169.00</p>
+              </div>
+        </li>
+        <li>
+            <img src="img/cotton-blue-shirt.jpg" class="product-inventory" />
+                <div class="product-description">
+                    <p class="product-category">shirts</p>
+                    <p class="product-info">Cotton Blue Shirt</p>
+                    <p class="product-price">$89.00</p>
+                </div>
+        </li>
+        <li>
+          <img src="img/checked-stretch-dress.jpg" class="product-inventory" />
+                <div class="product-description">
+                    <p class="product-category">dresses</p>
+                    <p class="product-info">Checked Stretch Dress</p>
+                    <p class="product-price">$129.00</p>
+                </div>
+      </ul>
 
     </section>
 
-    <section class="subscribe-section">
+    <section class="subscribe-section" id="updates">
       <div class="container">
           <h2 class="section-heading">Sign-up for</i> <span class="heading-bold">Updates</span></h2>
           <p class="subscription-text container">Stay updated on our latest product releases, be first to find out about upcoming sales, and get free style
           tips from our blog. Unsubscribe at any time.</p>
       </div>
 
-      <form class="subscription-bar">
+      <form class="subscription-bar container" id="subscription-form">
           <!-- placeholder for subscription bar, use focus pseudo element for the bar -->
-          <input type="text" value="Your Email" placeholder="hi">
+          <input type="text" id="email-text-input" placeholder="Your E-mail" >
           <!-- float the subscription to the right, button type="submit"-->
-          <button type="submit">Subscribe</button>
+          <input type="submit" value="Subscribe">Subscribe</input>
       </form>
 
     </section>
@@ -102,14 +200,14 @@
         <section class="contact-info">
           <p class="copyright">© 2016 Aloha Apparel Co.</p>
           <p class="powered-by">Powered by HTML and CSS.</p>
-          <p class='contact-us'>604-604-6040. <a href=mailto:"info@alohaapparel.com">info@alohaapparel.com</a></p>
-          <p class="address">1490 W Broadway
+          <p class='contact-us'>604-604-6040. <a href=mailto:"info@alohaapparel.com" class="e-mail">info@alohaapparel.com</a></p>
+          <p class="address"><span>1490 W Broadway
           Vancouver, BC, Canada</span>
         </section>
 
         <!-- insert font incons/ change the span to ul li -->
         <section class="social-media">
-          <ul style="list-style:none;">
+          <ul class="social-media-flex" style="list-style:none;">
             <li>Facebook</li>
             <li>Twitter</li>
             <li>Instagram</li>
@@ -118,6 +216,9 @@
           </ul>
         </section>
 
+        <script src="js/jquery/jquery-2.2.0.js"></script>
+        <script src="js/jquery-slider/jquery.bxslider.min.js"></script>
+        <script src="js/main.js"></script>
     </footer>
    </body>
 </html>
