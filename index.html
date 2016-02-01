@@ -5,11 +5,10 @@
      <meta charset="utf-8">
      <title>Aloha Shop</title>
      <link rel="stylesheet" type="text/css" href="ericmeyer_reset.css">
-     <link href="js/jquery-slider/jquery.bxslider.css" rel="stylesheet" />
+     <link rel="stylesheet" href="js/jquery-slider/jquery.bxslider.css" />
      <link rel="stylesheet" type="text/css" href="style.css">
      <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
    </head>
 
@@ -18,10 +17,17 @@
 <!-- the "container" class limits the display to 1240px and centers text -->
 
     <header class="main-header container">
-      <div class="flex-header">
-      <img src="img/aloha-logo.svg" alt="aloha logo" class="aloha-logo" />
+      <div class="test-header"
+        <div class="aloha-logo">
+            <img src="img/aloha-logo.svg" alt="aloha logo" />
+        </div>
 
-<!-- the id here applies smooth scrolling -->
+        <div class="cart-logo">
+            <img src="img/cart-icon.svg" alt="cart icon" />
+        </div>
+
+<!-- the nav id here applies smooth scrolling-->
+
       <nav class="navigation-menu" id="nav">
         <ul>
           <li>
@@ -38,17 +44,13 @@
           </li>
         </ul>
       </nav>
-
-      </nav>
-
-       <img src="img/cart-icon.svg" alt="cart logo" class="cart-logo" />
-     </div>
+    </div>
     </header>
 
      <section class="hero-banner clear">
        <div class="hero-text container">
-         <p class="hero-title">new collection</p>
-         <p class="hero-sub">Spring/Summer 2016</b></p>
+         <h4 class="hero-title">new collection</h4>
+         <h2 class="hero-sub">Spring/Summer 2016</h2>
        </div>
      </section>
 
@@ -205,16 +207,25 @@
           Vancouver, BC, Canada</span>
         </section>
 
+
+        <ul class="social-icons">
+          <li><i class="fa fa-facebook fa-lg"></i></li>
+          <li><i class="fa fa-twitter fa-lg"></i></li>
+          <li><i class="fa fa-instagram fa-lg"></i></li>
+          <li><i class="fa fa-pinterest fa-lg"></i></li>
+          <li><i class="fa fa-google-plus fa-lg"></i></li>
+        </ul>
+
         <!-- insert font incons/ change the span to ul li -->
-        <section class="social-media">
+        <div class="social-media">
           <ul class="social-media-flex" style="list-style:none;">
-            <li>Facebook</li>
-            <li>Twitter</li>
-            <li>Instagram</li>
-            <li>Pinterest</li>
-            <li>Google+</li>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+              <li>Pinterest</li>
+              <li>Google+</li>
           </ul>
-        </section>
+        </div>
 
         <script src="js/jquery/jquery-2.2.0.js"></script>
         <script src="js/jquery-slider/jquery.bxslider.min.js"></script>

@@ -7,30 +7,20 @@
 5. subscribe-section
 6. footer
 7. @fontface
+8. flexbox
 
 things that are unfinished:
 
-The Playfair fontface will not work for some reason although raleway fonts do. I've tried re-downloading
-the playfair fonts but the browser doesnt seem to render it. What I did to compensate was to italicize the heading
-to get close to specifications.
+- couldnt quite figure out how to manipulate the header with the flexbox
+- mobile and tablet versions
 
-i couldnt figure out on how to align text with clothing
-
-font-icons wouldn't load for some reason as well.
-
-i couldnt figure out how to put padding space beneath the paragraph text under each section.
-tried setting a max-width then adjusting the padding bottom/right but doesnt seem to do anything.
-so the result is a paragraph thats tightly close to each other without padding.
-
-THINGS TO DO:
-
-ICONS
-FONTS
-RESPONSIVE DESIGN
-HEADER
-SUBSCRIPTION JAVASCRIPT
-CLICK SLIDER
-PRODUCTS FINISH
+things i managed to do:
+- javascript smooth scrolling
+- javascript bx slider
+- javascript for subscription section
+- use flexbox for the categories section
+- finally got font icons to work
+- finally got the font awesome to work
 
 */
 
@@ -49,7 +39,10 @@ html {
 body {
   font-family: 'Raleway-Light';
   color: #2d2d2d;
+}
 
+h1 h2 h3 h4 {
+  font-family: 'Playfair-Display';
 }
 
 /* to contain the content and centers the section heading texts*/
@@ -89,19 +82,16 @@ brand-color: #e2574c;
 /* =============================================================================
                                 HEADER-SECTION
 ===============================================================================*/
-.main-header {
-}
 
-.flex-header {
+
+.main-header {
+  height: 5rem;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 2.5rem;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.navigation-menu li {
-  display: inline-block;
-  padding-top: 2rem;
-}
 
 .aloha-logo {
   width: 11rem;
@@ -113,6 +103,13 @@ brand-color: #e2574c;
   align-self: flex-end;
 }
 
+.navigation-menu {
+  align-self: center;
+}
+
+.navigation-menu ul {
+  display: inline-block;
+}
 
 /* =============================================================================
                                 HERO-SECTION
@@ -141,17 +138,21 @@ brand-color: #e2574c;
   font-size: 1.4rem;
   padding-bottom: 4rem;
   text-transform: uppercase;
+  font-family: 'Raleway-Light';
+  font-weight: bold;
 }
 
 .hero-sub {
-  font-size: 4em;
+  font-size: 5em;
+  font-family: 'Playfair-Display';
 }
 
 /* section headings. stylizes each section's heading text */
 
 .section-heading {
-  font-size: 2.5em;
+  font-size: 3em;
   padding: 4rem 4rem 2rem 4rem;
+  font-family: 'Playfair-Display';
   font-style: italic;
 }
 
@@ -168,6 +169,8 @@ brand-color: #e2574c;
 }
 
 .heading-bold {
+  font-family: 'Playfair-Display';
+  font-style: normal;
   font-weight: bold;
 }
 
@@ -229,6 +232,8 @@ brand-color: #e2574c;
   text-transform: uppercase;
   color: white;
   font-size: 3rem;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 
@@ -279,6 +284,9 @@ margin: 0 auto;
 .product-info {
   color: #e2574c;
   font-size: 1.5rem;
+  font-family: 'Playfair-Display';
+  font-weight: normal;
+  font-style: normal;
 }
 
 .product-price {
@@ -295,7 +303,8 @@ margin: 0 auto;
   background: linear-gradient( to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100% ),
               url(img/wave-bkgd.jpg) center bottom;
   background-repeat: no-repeat;
-  height: 42vh;
+  height: 25rem;
+  width: 100vw;
   color: white;
 
 }
@@ -306,13 +315,9 @@ margin: 0 auto;
 
 .subscription-text {
   font-size: 1.30rem;
-  margin: 0 auto;
-  padding-right: 20rem;
-  margin-left: 14rem;
-  padding-bottom: 1.2rem;
+  line-height: 2.3;
+  width: 49rem;
   font-family: 'Raleway-Light';
-  display: block;
-  line-height: 2.5rem;
 }
 
 .subscription-bar {
@@ -323,27 +328,26 @@ margin: 0 auto;
 input {
   background-color: white;
   border-radius: 27px;
-  width: 26rem;
-  height: 2.9rem;
+  width: 31rem;
+  height: 3.5rem;
   border: 1px solid white;
   font-size: 1rem;
   color: #969696;
   position: absolute;
   padding-left: 2rem;
-
 }
 
 input[type=submit] {
   background-color: #e2574c;
   border-radius: 20px;
-  width: 7rem;
-  height: 2.5rem;
+  width: 9rem;
+  height: 2.9rem;
   border: 1px solid #e2574c;
   font-size: 1rem;
   color: white;
   position: relative;
-  left: 18.5rem;
-  top: 0.2rem;
+  left: 21.7rem;
+  top: 0.3rem;
   z-index: 1;
 }
 
@@ -354,7 +358,7 @@ input[type=submit] {
 
 .footer-background {
   background-color:#242424;
-  height: 30vh;
+  height: 35vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -367,6 +371,12 @@ input[type=submit] {
   padding-right: 6rem;
 }
 
+.social-icons {
+  color: white;
+  padding-left: 57rem;
+  padding-top: 5rem;
+}
+
 ul li {
   padding-bottom: 1rem;
   font-size: 1rem;
@@ -375,7 +385,6 @@ ul li {
 .social-media:hover {
   color: #e2574c;
 }
-
 
 .contact-info {
   color: white;
@@ -418,7 +427,7 @@ ul li {
 =============================================================================== */
 
 @font-face {
-    font-family: 'Playfair-Regular';
+    font-family: 'Playfair-Display';
     src: url('css/fonts/playfair/PlayfairDisplay-Regular.eot');
     src: url('css/fonts/playfair/PlayfairDisplay-Regular.eot?#iefix') format('embedded-opentype'),
          url('css/fonts/playfair/PlayfairDisplay-Regular.woff') format('woff'),
@@ -429,7 +438,7 @@ ul li {
 }
 
 @font-face {
-    font-family: 'Playfair-Bold';
+    font-family: 'Playfair-Display';
     src: url('css/fonts/playfair/PlayfairDisplay-Bold.eot');
     src: url('css/fonts/playfair/PlayfairDisplay-Bold.eot?#iefix') format('embedded-opentype'),
          url('css/fonts/playfair/PlayfairDisplay-Bold.woff') format('woff'),
@@ -440,7 +449,7 @@ ul li {
 }
 
 @font-face {
-    font-family: 'Playfair-Italics';
+    font-family: 'Playfair-Display';
     src: url('css/fonts/playfair/PlayfairDisplay-Italic.eot');
     src: url('css/fonts/playfair/PlayfairDisplay-Italic.eot?#iefix') format('embedded-opentype'),
          url('css/fonts/playfair/PlayfairDisplay-Italic.woff') format('woff'),
@@ -452,7 +461,7 @@ ul li {
 
 
 @font-face {
-    font-family: 'Playfair-BoldItalics';
+    font-family: 'Playfair-Display';
     src: url('css/fonts/playfair/PlayfairDisplay-BoldItalic.eot');
     src: url('css/fonts/playfair/PlayfairDisplay-BoldItalic.eot?#iefix') format('embedded-opentype'),
          url('css/fonts/playfair/PlayfairDisplay-BoldItalic.woff') format('woff'),
@@ -477,7 +486,7 @@ ul li {
 }
 
 @font-face {
-    font-family: 'Raleway-Italic';
+    font-family: 'Raleway-Light';
     src: url('css/fonts/raleway/Raleway-LightItalic.eot');
     src: url('css/fonts/raleway/Raleway-LightItalic.eot?#iefix') format('embedded-opentype'),
          url('css/fonts/raleway/Raleway-LightItalic.woff') format('woff'),
@@ -488,7 +497,7 @@ ul li {
 }
 
 @font-face {
-    font-family: 'Raleway-Medium';
+    font-family: 'Raleway-Light';
     src: url('css/fonts/raleway/Raleway-Medium.eot');
     src: url('css/fonts/raleway/Raleway-Medium.eot?#iefix') format('embedded-opentype'),
          url('css/fonts/raleway/Raleway-Medium.woff') format('woff'),
@@ -500,7 +509,7 @@ ul li {
 
 
 @font-face {
-    font-family: 'Raleway-MediumItalic';
+    font-family: 'Raleway-Light';
     src: url('css/fonts/raleway/Raleway-MediumItalic.eot');
     src: url('css/fonts/raleway/Raleway-MediumItalic.eot?#iefix') format('embedded-opentype'),
          url('css/fonts/raleway/Raleway-MediumItalic.woff') format('woff'),
