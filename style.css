@@ -95,22 +95,34 @@ brand-color: #e2574c;
 
 .aloha-logo {
   width: 11rem;
-  align-self: flex-start;
+  align-self: center;
+  order: 1;
 }
 
 .cart-logo {
   width: 4rem;
-  align-self: flex-end;
+  align-self: center;
+  order: 3;
 }
 
 .navigation-menu {
   align-self: center;
+  order: 2;
 }
 
 .navigation-menu ul {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
 }
 
+.navigation-menu ul li {
+  padding-left: 1.5rem;
+}
+
+.test-header {
+  display: flex;
+  justify-content: space-between;
+}
 /* =============================================================================
                                 HERO-SECTION
 ===============================================================================*/

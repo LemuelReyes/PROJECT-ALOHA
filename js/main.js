@@ -28,13 +28,12 @@ $(function() {
   });
 });
 
-
 // subscription form
 
 $('#subscription-form').on('submit', function(event) {
    event.preventDefault();
 
-   if ( $('#email-text-input').val() == '' ) {
+   if ( $('#email-text-input').val() === '' ) {
       alert('Please submit a valid e-mail address.');
    } else {
       alert('Thanks for subscribing!');
